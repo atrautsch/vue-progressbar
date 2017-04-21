@@ -61,7 +61,8 @@ export default {
                         },
                         location: 'top',
                         autoRevert: true,
-                        inverse: false
+                        inverse: false,
+                        autoFinish: false
                     }
                 }
             }
