@@ -56,7 +56,7 @@ module.exports.install = function (Vue, options = {}) {
             this.state.cut = 10000 / Math.floor(time)
             this.state.timer = setInterval(() => {
                 this.increase(this.state.cut * Math.random())
-                if (this.$vm.RADON_LOADING_BAR.percent > 95 && this.$vm.RADON_LOADING_BAR_OPTIONS.autoFinish === true) {
+                if (this.$vm.RADON_LOADING_BAR.percent > 95 && (this.$vm.RADON_LOADING_BAR.options.autoFinish === true || this.$vm.RADON_LOADING_BAR.percent === 100)) {
                     this.finish()
                 }
             }, 100)
